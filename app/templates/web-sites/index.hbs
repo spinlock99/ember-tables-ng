@@ -1,0 +1,10 @@
+<table>
+{{#each model as |web-site|}}
+  <tr {{action "edit" web-site}}>
+    <td>{{web-site.id}}</td>
+    <td>{{web-site.name}}</td>
+  </tr>
+{{/each}}
+</table>
+
+{{outlet}}
