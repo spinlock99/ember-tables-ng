@@ -1,11 +1,20 @@
-Index Template
-<br>
 <table>
-  {{#each model as |web-site|}}
-    {{#link-to 'web-site' web-site}}
-      <tr>{{web-site.name}}</tr>
-    {{/link-to}}
-  {{/each}}
+  <thead>
+    <tr>
+      <td>Alexa Rank</td>
+      <td>URL</td>
+      <td>Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |webSite|}}
+      <tr {{action 'edit' webSite}}>
+        <td>{{webSite.alexa_global_rank}}</td>
+        <td>{{webSite.url}}</td>
+        <td>{{webSite.name}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
 </table>
 
 {{outlet}}

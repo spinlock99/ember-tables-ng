@@ -6,7 +6,6 @@ IndexRoute = Ember.Route.extend
 
   actions:
     edit: (webSite) ->
-      console.log "transitionTo"
-      @transitionTo('web-site', webSite.id)
+      @transitionTo('web-site', webSite)
 
 `export default IndexRoute`
