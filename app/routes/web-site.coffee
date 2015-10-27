@@ -2,6 +2,6 @@
 
 WebSiteRoute = Ember.Route.extend
   model: (params) ->
-    return @store.find('web-site', params.webSiteId)
+    return @store.find('web-site', params['web-site_id'])
 
 `export default WebSiteRoute`

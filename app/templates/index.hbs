@@ -1,0 +1,11 @@
+Index Template
+<br>
+<table>
+  {{#each model as |web-site|}}
+    {{#link-to 'web-site' web-site}}
+      <tr>{{web-site.name}}</tr>
+    {{/link-to}}
+  {{/each}}
+</table>
+
+{{outlet}}

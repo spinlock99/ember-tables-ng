@@ -1,10 +1,12 @@
 <table>
-{{#each model as |web-site|}}
-  <tr {{action "edit" web-site}}>
-    <td>{{web-site.id}}</td>
-    <td>{{web-site.name}}</td>
-  </tr>
-{{/each}}
+  {{#each model as |web-site|}}
+    {{!#link-to 'web-sites.index.web-site' web-site}}
+      <tr>
+        <td>{{web-site.id}}</td>
+        <td>{{web-site.name}}</td>
+      </tr>
+    {{!/link-to}}
+  {{/each}}
 </table>
 
 {{outlet}}
